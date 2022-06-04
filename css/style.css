@@ -196,6 +196,11 @@ footer {
     display: block; 
 }
 
+#title, #short { 
+    max-width: 100%; 
+    overflow-wrap: break-word; 
+}
+
 #title a { 
     color: black; 
 }
@@ -296,7 +301,12 @@ footer {
 
 #heading { 
     text-align: center;
-    margin-bottom: 5%; 
+    margin-bottom: 30px; 
+}
+
+#heading i { 
+    margin-top: 5px; 
+    font-size: 20pt; 
 }
 
 .section-title { 
@@ -313,17 +323,22 @@ footer {
     border-color: var(--sinbad); 
 }
 
+.section { 
+    margin-bottom: 10px; 
+}
+
 .section-body { 
     margin-left: 10%; 
     width: 75%; 
 }
 
 .section-body > * { 
-    margin-bottom: 5%; 
+    margin-bottom: 30px; 
 }
 
 .icon { 
     width: 10%; 
+    display: block; 
 }
 
 .icon img { 

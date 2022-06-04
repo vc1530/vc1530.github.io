@@ -5,15 +5,12 @@
 
         <meta charset="utf-8" />
         <title>Resume | Vanessa Chen</title>
+        <link rel="icon" href="favicon.ico?" />
         <meta name ="Description" content="Hi! My name's Vanessa and I'm a computer science student at NYU." />
 
         <meta name="viewport" content="width=device-width initial-scale=1" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-        <link rel="stylesheet" media="only screen and (max-width: 480px)" href="css/mobile.css" />
-        <link rel="stylesheet" media="only screen and (min-width: 481px) and (max-width: 960px)" href="css/tablet.css" />
-        <link rel="stylesheet" media="only screen and (min-width: 961px)" href="css/desktop.css" />
 
         <!-- load js files  -->
 
@@ -36,10 +33,12 @@
 
                 <div id="heading">
                     <h1>Resume</h1>
-                    <a href="/documents/ChenVanessaResume.pdf" download><i class="fa fa-download"></i></a>
+                    <a href="/documents/ChenVanessaResume.pdf" download>
+                        <i class="fa fa-download"></i>
+                    </a>
                 </div>
             
-                <section id="education">
+                <section class="section" id="education">
                     <div class="float section-title">
                         <h2>Education</h2>
                     </div>
@@ -50,11 +49,9 @@
                                     <h3>New York University, College of Arts and Sciences</h3>
                                     <p>B.A. in Computer Science&ensp;|&ensp;Expected May 2024</p>
                                 </div>
-                                <div class="float icon">
-                                    <a href="https://nyu.edu">
-                                        <img src="images/nyu.jpg"/>
-                                    </a>
-                                </div>
+                                <a class="float icon" href="https://nyu.edu">
+                                    <img src="images/nyu.jpg"/>
+                                </a>
                                 <div class="clear"></div>
                             </div>
                             <p><b>Honors: </b>Presidential Honors Scholar</p>
@@ -71,31 +68,28 @@
                                     Artifical Intelligence, Computer Graphics 
                                 </p>
                             </div>
-                            <div class="float icon">
-                                <a href="https://stuy.enschool.org/">
-                                    <img id="stuy-icon" src="images/stuy.jpg"/>
-                                </a>
-                            </div>
+                            <a class="float icon" href="https://stuy.enschool.org/">
+                                <img id="stuy-icon" src="images/stuy.jpg"/>
+                            </a>
                             <div class="clear"></div>
                         </div>
                     </div>
                     <div class="clear"></div>
                 </section>
 
-                <section id="work">
+                <section class="section" id="work">
                     <div class="float section-title">
                         <h2>Work</h2>
                     </div>
                     <div class="float section-body">
-
                         <div id="web-design">
                             <div class="heading">
                                 <h3>NYU Computer Science</h3>
                                 <p>Web Design Tutor&ensp;|&ensp;May 2022 - Present</p>
                             </div>
                             <div>
-                                Host office hours to answer student questions about UNIX commands, GitHub,
-                                HTML, CSS, etc. and debug code. Syllabus can be found <a href="https://nyu-web-design.github.io/course-materials/syllabus">here</a>.
+                                Host office hours for an intro level undergraduate computer science class to help students debug code and answer questions about UNIX, GitHub,
+                                HTML, CSS, etc.. Syllabus can be found <a href="https://nyu-web-design.github.io/course-materials/syllabus">here</a>.
                             </div>
                         </div>
 
@@ -110,29 +104,24 @@
                                 graph theory, and recursion trees. 
                             </div>
                         </div>
-
                     </div>
                     <div class="clear"></div>
                 </section>
 
-                <section id="resume-projects">
+                <section class="section" id="resume-projects">
                     <div class="float section-title">
                         <h2>Projects</h2>
                     </div>
                     <div class="float section-body">
                         <div id="resume-wiredin">
-                            <div>
-                                <div class="float heading">
-                                    <h3>WiredIn</h3>
-                                    <p>Full Stack Developer&ensp;|&ensp;May 2022 - Present</p>
-                                </div>
-                                <div class="float icon">
-                                    <a href="https://github.com/vc1530/wiredin">
-                                        <img class="pad-img" src="images/wiredin-icon.png"/>
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
+                            <div class="float heading">
+                                <h3>WiredIn</h3>
+                                <p>Full Stack Developer&ensp;|&ensp;May 2022 - Present</p>
                             </div>
+                            <a class="float icon" href="https://github.com/vc1530/wiredin">
+                                <img class="pad-img" src="images/wiredin-icon.png"/>
+                            </a>
+                            <div class="clear"></div>
                             <div>
                                 Developed a ReactJS front end and implemented JWT login authentication for 
                                 a platform dedicated to helping female tech students connect with mentors in their 
@@ -141,18 +130,14 @@
                         </div>
 
                         <div id="resume-sav">
-                            <div>
-                                <div class="float heading">
-                                    <h3>Sorting Algorithm Visualizer</h3>
-                                    <p>Front End Developer&ensp;|&ensp;April 2022 - May 2022</p>
-                                </div>
-                                <div class="float icon">
-                                    <a href="https://github.com/vc1530/sorting-algorithm-visualizer">
-                                        <img class="pad-img" src="images/sav-icon.png" />
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
+                            <div class="float heading">
+                                <h3>Sorting Algorithm Visualizer</h3>
+                                <p>Front End Developer&ensp;|&ensp;April 2022 - May 2022</p>
                             </div>
+                            <a class="float icon" href="https://github.com/vc1530/sorting-algorithm-visualizer">
+                                <img class="pad-img" src="images/sav-icon.png" />
+                            </a>
+                            <div class="clear"></div>
                             <div>
                                 Built a ReactJS front end app for visualizing the 5 most popular sorting algorithms 
                                 (Insertion Sort, Selection Sort, Bubble Sort, Merge Sort, and Quick Sort). 
@@ -161,18 +146,14 @@
                         </div>
 
                         <div id="resume-fitnet">
-                            <div>
-                                <div class="float heading">
-                                    <h3>FitNet</h3>
-                                    <p>Full Stack Developer&ensp;|&ensp;April 2022 - May 2022</p>
-                                </div>
-                                <div class="float icon">
-                                    <a href="https://github.com/vc1530/final-project-fitnet">
-                                        <img class="pad-img" src="images/fitnet-icon.png" />
-                                    </a>
-                                </div>
-                                <div class="clear"></div>
+                            <div class="float heading">
+                                <h3>FitNet</h3>
+                                <p>Full Stack Developer&ensp;|&ensp;April 2022 - May 2022</p>
                             </div>
+                            <a class="float icon" href="https://github.com/vc1530/final-project-fitnet">
+                                <img class="pad-img" src="images/fitnet-icon.png" />
+                            </a>
+                            <div class="clear"></div>
                             <div>
                                 Worked in a team of 6 developers, following Scrum and Agile methodologies, 
                                 to build a full stack social media app dedicated to the fitness community. 
@@ -185,20 +166,20 @@
                     <div class="clear"></div>
                 </section>
 
-                <section id="skills">
+                <section class="section" id="skills">
                     <div class="float section-title">
                         <h2>Skills</h2>
                     </div>
                     <div class="float section-body">
 
-                        <div id="technical">
+                        <div>
                             <h3>Technical</h3>
                             <p>
                                 Java, JavaScript (React, Express, Node), HTML, CSS, Python, C, C++, Git 
                             </p>
                         </div>
 
-                        <div id="interests">
+                        <div>
                             <h3>Interests</h3>
                             <p>
                                 Guitar, Calligraphy, Watercolor Painting 
