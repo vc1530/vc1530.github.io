@@ -14,7 +14,7 @@ $(function () {
     $(".project").mouseout(function() { 
         const desc = $(this).find(".project-desc"); 
         desc.css("background-color", "var(--almond"); 
-        desc.css("color", "var(--text-color)"); 
+        desc.css("color", "black"); 
         const img = $(this).find("img.project-img"); 
         img.css("filter", "none")
         img.css("-webkit-filter", "none"); 

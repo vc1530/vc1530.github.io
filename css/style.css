@@ -7,10 +7,38 @@
     --cutty-sark: #507b75; 
     --sea-nymph: #74a39c; 
     --sinbad: #a0d1be; 
+    --shadow: rgb(210, 210, 210); 
     --font-family: 'Plus Jakarta Sans', sans-serif; 
     --gradient: linear-gradient(to right, var(--deep-blush) 0%, var(--sinbad) 51%, var(--deep-blush) 100%); 
     --inverse-gradient: linear-gradient(to right, var(--sinbad) 0%, var(--deep-blush) 51%, var(--sinbad) 100%); 
 }
+
+/* fadeIn animation  */
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 /* general styling  */
 
@@ -38,6 +66,11 @@ div.wrapper {
 
 .main {    
     padding: 10% 10% 3% 10%; 
+    animation: fadeIn 1.5s;
+    -webkit-animation: fadeIn 1.5s;
+    -moz-animation: fadeIn 1.5s;
+    -o-animation: fadeIn 1.5s;
+    -ms-animation: fadeIn 1.5s;
 }
 
 a { 
@@ -51,7 +84,7 @@ a:hover {
     transition: .25s; 
 }
 
-h2 { 
+h1, h2, h3 { 
     margin: 0; 
 }
 
@@ -61,11 +94,11 @@ header, footer {
     text-align: center;
     vertical-align: middle; 
     border-width: 3px;
-    width: 96%; 
-    padding: 2%; 
+    width: 95%; 
+    padding: 2.5%; 
     z-index: 99; 
     background-color: white;
-    opacity: 95%;
+    opacity: 95%; 
 }
 
 header {
@@ -76,26 +109,29 @@ header {
 }
 
 header a { 
-    color: gray;  
+    color: black; 
     margin: .5%;
     padding: 1.25%; 
     transition: .25s;  
     font-weight: bold;
     border-radius: 20px;
+    font-size: 14pt; 
 }
 
 header a:hover { 
     color: white; 
-    transition: .25s; 
     background-color: var(--sinbad);
+    transition: .25s;  
 }
 
 .current { 
-    color: black; 
+    color: white; 
+    background-color: var(--deep-blush);
+    transition: .25s; 
 }
 
 footer { 
-    border-image: var(--inverse-gradient); 
+    border-image: var(--gradient); 
     border-image-slice: 1; 
     border-top-style: solid; 
 }
@@ -104,13 +140,18 @@ footer {
 
 #side { 
     width: 25%; 
+    overflow-wrap: break-word;
+}
+
+#side > * { 
+    margin-bottom: 5%; 
 }
 
 #side img { 
     border-radius: 40% 40% 40% 3%;  
 }
 
-#side #img::after {
+#side h1::after {
     content: "";
     display: inline-block; 
     background-color: var(--sinbad); 
@@ -120,17 +161,20 @@ footer {
 }
 
 #socials i { 
-    padding: 5%; 
+    padding: 0 5%; 
     font-size: 24pt; 
 }
 
 #about { 
     font-size: 14pt; 
+    margin-top: 2.5%; 
     margin-left: 10%; 
-    width: 60%; 
+    width: 65%; 
 }
 
 /* projects page styling  */
+
+/* side description */
 
 #desc { 
     width: 25%; 
@@ -140,12 +184,16 @@ footer {
 }
 
 #desc > * {
-    margin-bottom: 10px; 
+    margin-bottom: 5%; 
     width: fit-content; 
 }
 
 #desc i { 
     font-size: 75px; 
+}
+
+#github { 
+    display: block; 
 }
 
 #title a { 
@@ -166,6 +214,8 @@ footer {
     margin-bottom: 10px; 
 }
 
+/* projects */
+
 #projects { 
     margin-left: 40%; 
     width: 60%;
@@ -184,6 +234,8 @@ footer {
 }
 
 .img-container { 
+    border-radius: 20px 20px 0 0; 
+    border: .25px solid gray; 
     position: relative; 
 }
 
@@ -191,13 +243,12 @@ footer {
     display: none; 
     padding: 3%; 
     border-radius: 50%; 
-    border: 2px solid white; 
+    background-color: white; 
     font-size: 40px; 
     top: 50%; 
     left: 50%; 
     position: absolute; 
     transform: translate(-50%, -50%);
-    transition: .25s; 
 }
 
 .project-img { 
@@ -209,16 +260,11 @@ footer {
     transition: .25s; 
 }
 
-.project-img:hover { 
-    filter: blur(4px); 
-    -webkit-filter: blur(4px);
-}
-
 .project-desc { 
+    border: .25px solid gray; 
     position: relative; 
     z-index: 1; 
     background-color: var(--almond);
-    color: var(--text-color); 
     padding: 5%; 
     margin-top: -5px; 
     transition: .25s; 
@@ -230,7 +276,7 @@ footer {
     padding: 1%; 
     border-radius: 50%; 
     width: 10%; 
-    box-shadow: 1px 1px 1px 1px rgb(210, 210, 210);
+    box-shadow: 1px 1px 1px 1px var(--shadow);
 }
 
 .project-info { 
@@ -240,4 +286,61 @@ footer {
 
 .subtext { 
     font-size: 10pt;  
+}
+
+#class-link { 
+    color: rgb(100, 100, 100); 
+}
+
+/* resume  */
+
+#heading { 
+    text-align: center;
+    margin-bottom: 5%; 
+}
+
+.section-title { 
+    width: 15%; 
+}
+
+.section-title h2 { 
+    max-width: 100%; 
+    width: fit-content; 
+    overflow-wrap: break-word;
+    padding-bottom: 10px; 
+    border-bottom-style: solid; 
+    border-width: 3px; 
+    border-color: var(--sinbad); 
+}
+
+.section-body { 
+    margin-left: 10%; 
+    width: 75%; 
+}
+
+.section-body > * { 
+    margin-bottom: 5%; 
+}
+
+.icon { 
+    width: 10%; 
+}
+
+.icon img { 
+    transition: .25s; 
+    border-radius: 50%; 
+}
+
+.icon img:hover { 
+    transition: .25s; 
+    box-shadow: 1px 1px 1px 1px var(--shadow); 
+}
+
+.heading { 
+    width: 90%; 
+}
+
+.pad-img { 
+    width: 90%; 
+    padding: 5%; 
 }
