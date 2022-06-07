@@ -110,7 +110,7 @@ header {
 
 header a { 
     color: black; 
-    margin: .5%;
+    margin: 0 .5%;
     padding: 1.25%; 
     transition: .25s;  
     font-weight: bold;
