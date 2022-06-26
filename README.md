@@ -1,3 +1,3 @@
 # Personal Website 
 
-View it [here][wwww.vanessaschen.com] 
+View it [here](wwww.vanessaschen.com) 
